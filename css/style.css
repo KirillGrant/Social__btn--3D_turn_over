@@ -1,0 +1,73 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 250px;
+    background: gray;
+}
+
+.wrapper {
+    width: 100%;
+    text-align: center;
+}
+
+.container {
+    display: inline-block;
+    margin: 10px;
+    height: 50px;
+    width: 200px;
+    cursor: pointer;
+}
+
+.turn-over__btn--back {
+    background: linear-gradient(45deg, red, black);
+}
+
+.turn-over__btn--front {
+    background: linear-gradient(45deg, red, black);
+}
+
+
+.container:hover .turn-over {
+    transform: rotateX(-90deg);
+}
+
+.turn-over {
+    transition: all .5s ease;
+    transform-style: preserve-3d;
+    position: relative;
+    transform-origin: 100% 25px;
+}
+
+.turn-over__btn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 50px;
+    width: 180px;
+    padding: 0 10px;
+    border-radius: 5px;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'Roboto Mono', monospace;
+    text-align: center;
+    color: whitesmoke;
+    letter-spacing: 2px;
+}
+
+.fa {
+    font-size: 24px;
+}
+
+.turn-over__btn--front {
+    transform: translateZ(22px);
+}
+
+.turn-over__btn--back {
+    text-shadow: 1px 0 2px #000;
+    transform: rotateX(90deg) translateZ(22px);
+}
